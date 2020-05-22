@@ -111,30 +111,53 @@
 	height: 960px;
 	background-color: whitesmoke;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
   }
   
   .view-stories {
-	margin-right: 100px;
-	margin-top: 25px;
+	margin-right: 135px;
+	margin-top: 45px;
 	float: right; 
 	font-size: 24px;
 	color: #3b3b3b;
   }
   
-  .article-block {
-	height: 589px;
-	width: 375px;
-	background-color: #C6CFC2;
-	display: flex;
-	justify
+  .story-card {
+	margin-left: 8vw;
+	margin-top: 8vw;
   }
   
   .block-image {
-	object-fit: cover;
-	width: 300px;
-	height: 300px;
+	width: 91.5%;
+	max-width: 95%;
   }
   
+  .share {
+	text-align: center;
+	margin-top: 80px;
+  }
+  
+  .submit-your-story {
+	width: 275px;
+	height: 61px;
+	background-color: #2F3C18;
+	color: whitesmoke;
+	font-size: 24px;
+	margin: 30px 42vw 40px 42vw;
+  }
+	
+  .footer-block {
+	height: 200px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+  }
+  
+  .footer-nav a {
+	display: block;
+	font-size: 24px;
+	margin-left: 100px;
+	color: whitesmoke;
+  }
