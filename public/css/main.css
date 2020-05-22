@@ -16,8 +16,9 @@
   }
   
   .bigfoot-logo {
-	width: 400px;
-	margin-left: 100px;
+	max-width: 400px;
+	width: 75vw;
+	margin-left: 6vw;
   }
   
   .nav-links {
@@ -41,6 +42,21 @@
 	font-size: 22px;
 	margin-right: 130px;
 	margin-left: 25px;
+  }
+  
+  .hamburger-menu {
+	opacity: 0%;
+	float: right;
+	margin-right: 6vw;
+  }
+  
+  .line {
+	display: block;
+	width: 40px;
+	height: 6px;
+	border-radius: 3px;
+	background-color: #2F3c18;
+	margin: 5px;
   }
   
   /* Main Page */
@@ -93,6 +109,77 @@
 	margin-bottom: 0;
   }
   
+  .btn {
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  }
+  
+  
+  /* Modal */
+  
+  .overlay {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 90;
+	display: none;
+  }
+  
+  .login-popup {
+	background-color: whitesmoke;
+	height: 500px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	z-index: 100;
+	display: none;
+  }
+  
+  .login-prompt {
+	color: #3b3b3b;
+  }
+  
+  label {
+	display: block;
+	font-size: 20px;
+	margin-left: 35px;
+  }
+  
+  input {
+	width: 200px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+	margin-left: 35px;
+	margin-bottom: 20px;
+  }
+  
+  .submit {
+	width: 80px;
+	margin: 10px;
+	display: block;
+	position: relative;
+	border-radius: 5px;
+	margin: 0px;
+	height: 61px;
+	width: 275px;
+	color: whitesmoke;
+	font-size: 18px;
+	background-color: #2F3C18;
+  }
+  
+  .buttons {
+	display: block;
+  }
   
   /* Sightings */
   
@@ -124,22 +211,13 @@
 	color: #3b3b3b;
   }
   
-<<<<<<< HEAD:main.css
   .story-card {
 	margin-left: 8vw;
 	margin-top: 8vw;
-=======
-  .article-block {
-	height: 589px;
-	width: 375px;
-	background-color: #C6CFC2;
-	display: flex;
-
->>>>>>> dev:public/css/main.css
   }
   
   .block-image {
-	width: 91.5%;
+	min-width: 1350px;
 	max-width: 95%;
   }
   
@@ -169,4 +247,61 @@
 	font-size: 24px;
 	margin-left: 100px;
 	color: whitesmoke;
+  }
+  
+  .bigfoot-logo-2 {
+	width: 400px;
+	margin-left: 870px;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+	.hamburger-menu {
+	  opacity: 100%;
+	  margin-top: 20px;
+	}
+	.nav-links {
+	  display: none;
+	}
+	.nav-link {
+	  display: none;
+	}
+	.main-page-field {
+	  display: block;
+	  justify-content: center;
+	  align-items: center;
+	  height: 600px;
+	}
+	.main-image {
+	  width: 90vw;
+	  height: 300px;
+	  margin: 5vw;
+	}
+	.spacer-block {
+	  display: none;
+	}  
+	.welcome-block {
+	  height: auto;
+	  width: 95vw;
+	  display: flex;
+	}
+	.welcome-text, .be-informed {
+	  text-align: center;
+	  margin-top: 0;
+	}
+	.signup {
+	  margin: 0;
+	}
+	.view-stories {
+	  padding: 15px;
+	  margin: 0;
+	  margin-left: 30%; 
+	  float: none;
+	}
+	.submit-your-story {
+	  margin: 20px 20%;
+	}
+	.bigfoot-logo-2 {
+	  display: none;
+	}
+	
   }
