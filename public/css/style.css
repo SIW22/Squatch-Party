@@ -1,16 +1,35 @@
-body{
-    font-family: "Roboto" ;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-table,tr,td{
-    padding:15px;
+table{
+    font-size: 18px;
+    margin-top: 15px;
+    
+    width: 90%;
+    table-layout: auto ;
 }
 
-tr{
-    background-color: #F6F6F6;
-    max-width: 65%;
+tr,td ,th{
+    padding:20px;
+    border-left: white 2px solid;
+}
 
+th,td{
+    width:15%;
+}
+
+
+tbody tr{
+    background-color: #c6cfc2;
+}
+thead{
+    background-color: #ECEFEB;
+    font-weight: 700;
+    padding: 30px;
 }
 
 
@@ -20,21 +39,29 @@ nav{
     display: inline-block;
     right: 0;
     top: 15px;
-    margin-right: 40px;
+    margin-right: 50px;
     margin-left: 30px;
     padding-right: 50px;
-   
+   font-weight: 500;
 
 }
 nav ul li{
     display: inline;
     margin-left: 50px;
+    color: black
+    
+}
+
+tbody tr:nth-child(even){
+    background-color: #f6f6f6;
 }
 
 
 .logo{
     background-color: #a6afa2;
     position: relative;
+    padding: 2px;
+    
 }
 
 
@@ -47,16 +74,18 @@ nav ul li{
 }
  
 .info ul li{
-    margin-left: 50px;
+    margin-left: 70px;
+    font-weight: 400;
     color: black;
 }
 
-.col{
-    background-color: #ECEfEB;
+
+
+
+.info ul li:hover{
+    font-weight: 700;
 }
 
-
-tr:nth-child(odd){
-    background-color: #C6CFC2;
-
+.user{
+    margin-left: 70px;
 }

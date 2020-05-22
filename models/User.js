@@ -15,6 +15,14 @@ const UserSchema = new mongoose.Schema({
     },
     Locations:{
         type:String
+    },
+    post:{
+        type:Number,
+        default:0
+    },
+    activite:{
+        type:Boolean,
+        default:true
     }
 
 });
