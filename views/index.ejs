@@ -1,17 +1,26 @@
-<div class="overlay">
-  <div class="modal-container">
-    <div class="login-popup">
-      <h3 class="login-prompt">Sign Up!</h3>
-      <form action="" class="log-in">
-        <label for="name">Name</label>
-        <input type="text" class="name">
-        <label for="email">Email</label>
-        <input type="text" class="email">
-        <label for="password">Password</label>
-        <input type="text" class="password">
-        <button type="submit" class="submit">Sign Up</button>
-      </form>
-    </div>
+<div class="overlay1 overlay">
+  <div class="login-popup">
+    <h3 class="login-prompt">Sign Up!</h3>
+    <form action="" class="log-in">
+      <label for="name">Name</label>
+      <input type="text" class="name">
+      <label for="email">Email</label>
+      <input type="text" class="email">
+      <label for="password">Password</label>
+      <input type="text" class="password">
+      <label for="locaiton">Location</label>
+      <input type="text" class="location">
+      <button type="submit" class="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<div class="overlay2">
+  <div class="confirm-popup">
+    <h3 class="login-prompt">Confirmed!</h3>
+    <p class="congrats">Congratulations! Your account has been created.</p>
+      <button class="close-button btn">Close</button>
+    </p>
   </div>
 </div>
 
@@ -44,7 +53,7 @@
       <p class="welcome-text">Welcome to <br> Bigfoot Sighters!</p>
       <div class="spacer-block"></div>
       <p class="be-informed">Be informed about bigfoot sightings <br> and join us on our next expedition.</p>
-      <button class="signup btn">Sign Up</button>
+      <button class="signup-btn btn">Sign Up</button>
       
     </div>  
 </div>
@@ -84,17 +93,28 @@
 
 
 <script>
-  const modal = document.querySelector(".login-popup");
-  const buttonOn = document.querySelector(".signup");
-  // const buttonOff = document.querySelector(".signinOff");
-  const overlay = document.querySelector(".overlay");
+const signup = document.querySelector(".signup-btn");
+const modal1 = document.querySelector(".login-popup");
+const modal2 = document.querySelector(".confirm-popup");
+const overlay1 = document.querySelector(".overlay1");
+const overlay2 = document.querySelector(".overlay2");
+const confirmation = document.querySelector(".confirm-popup");
+const close = document.querySelector(".close-button");
 
-  buttonOn.addEventListener('click', () => {
-    modal.style.display = "flex";
-    overlay.style.display = "flex"; 
-  });
+signup.addEventListener('click', () => {
+  overlay1.style.display = "flex";
+  modal1.style.display = "flex";
+});
 
-  buttonOff.addEventListener('click', () => {
-    modal.style.display = "none";
-  });
+confirmation.addEventListener('click', () => {
+  overlay1.style.display = "none";
+  modal1.style.display = "none";
+  overlay2.style.display = "flex";
+  confirmation.style.display = "flex";
+});
+
+close.addEventListener('click', () => {
+  overlay2.style.display = "none";
+  confirmation.style.display = "none";
+})
 </script>
