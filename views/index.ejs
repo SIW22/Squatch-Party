@@ -1,3 +1,20 @@
+<div class="overlay">
+  <div class="modal-container">
+    <div class="login-popup">
+      <h3 class="login-prompt">Sign Up!</h3>
+      <form action="" class="log-in">
+        <label for="name">Name</label>
+        <input type="text" class="name">
+        <label for="email">Email</label>
+        <input type="text" class="email">
+        <label for="password">Password</label>
+        <input type="text" class="password">
+        <button type="submit" class="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <div class="banner">
   <img src="https://i.imgur.com/fA0u9kJ.png" alt="bigfoot sighters logo" class="bigfoot-logo">
   
@@ -10,6 +27,13 @@
     <button class="signin btn">Sign In</button>
     
   </nav>
+  
+    <div class="hamburger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  
 </div>
 
 <div class="main-page-field">
@@ -22,10 +46,9 @@
       <p class="be-informed">Be informed about bigfoot sightings <br> and join us on our next expedition.</p>
       <button class="signup btn">Sign Up</button>
       
-    </div>
-  
-  
+    </div>  
 </div>
+
 <div class="banner sightings-banner">
   <h3 class="divider-text">Sightings</h3>
 </div>
@@ -55,5 +78,23 @@
       <br>
       <a href="#" class="contact">Contact</a>
     </section>
+    <img src="https://i.imgur.com/fA0u9kJ.png" alt="bigfoot sighters logo" class="bigfoot-logo-2">
   </div>
 </footer>
+
+
+<script>
+  const modal = document.querySelector(".login-popup");
+  const buttonOn = document.querySelector(".signup");
+  // const buttonOff = document.querySelector(".signinOff");
+  const overlay = document.querySelector(".overlay");
+
+  buttonOn.addEventListener('click', () => {
+    modal.style.display = "flex";
+    overlay.style.display = "flex"; 
+  });
+
+  buttonOff.addEventListener('click', () => {
+    modal.style.display = "none";
+  });
+</script>
