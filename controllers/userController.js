@@ -7,7 +7,7 @@ const db = require('../models');
 
 
 router.get('/', (req,res) =>{
-    res.send('hey is working')
+    res.render('index')
 })
 
 router.get('/dashborad' , (req,res) =>{
