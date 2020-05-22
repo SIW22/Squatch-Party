@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const DateOnly = require('mongoose-dateonly')(mongoose);
 
 const UserSchema = new mongoose.Schema({
     name:{
@@ -13,8 +14,8 @@ const UserSchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    Locations:{
-        type:String
+    location:{
+        type:String,
     },
     post:{
         type:Number,
@@ -23,11 +24,13 @@ const UserSchema = new mongoose.Schema({
     activite:{
         type:Boolean,
         default:true
-    }
+    },
+    time : { type : DateOnly, default: Date.now }
 
-});
+},{timestamps:true});
 
 
 const User = mongoose.model('User', UserSchema);
+
 
 module.exports = User;
