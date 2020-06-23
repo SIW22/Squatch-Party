@@ -1,12 +1,12 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
-const app = express(); // Express is a function that returns an object full of tools we will use to build our server
+const app = express(); 
 
 // Set View Engine (Server Rendered Templates)
 app.set('view engine', 'ejs');
 
-// Fruit Controller
+// User Controller
 const userController = require('./controllers/userController')
 
 // ----------------- MIDDLEWARE
@@ -14,7 +14,6 @@ const userController = require('./controllers/userController')
 // Serve Static Assets
 app.use(express.static(`${__dirname}/public`));
 
-// MethodOverride (allow us to make DELETE/PUT requests from the browser without AJAX)
 app.use(methodOverride('_method'));
 
 // BodyParser
@@ -32,5 +31,5 @@ app .use('/users', userController)
 
 
 app.listen(4000,() =>{
-    console.log('server is runnign at port 4000')
+    console.log('server is running at port 4000')
 })

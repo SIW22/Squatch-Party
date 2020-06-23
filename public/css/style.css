@@ -18,7 +18,7 @@ table{
     table-layout: auto ;
 }
 
-tr,td ,th{
+tr,td,th{
     padding:20px;
     border-left: white 2px solid;
 }

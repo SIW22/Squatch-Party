@@ -11,11 +11,11 @@ router.get('/', (req,res) =>{
     res.render('index')
 })
 
-router.get('/dashborad' , async (req,res) =>{
+router.get('/dashboard' , async (req,res) =>{
     try{
         const alluser = await db.User.find()
         console.log(alluser)
-        res.render('dashborad' ,{
+        res.render('dashboard' ,{
             user:alluser
         })
     }
